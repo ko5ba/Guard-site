@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Password\StoreRequest;
 use Illuminate\Http\Request;
 
 class GenerateControllerPassword extends Controller
@@ -21,9 +22,10 @@ class GenerateControllerPassword extends Controller
         return view('site.generatepasswordindex');
     }
 
-    public function generate(Request $request)
+    public function generate(Request $request, StoreRequest $storeRequest)
     {
         $this->lengthPassword = $request->input('lengthPassword');
+        $storeRequest = $storeRequest->validated($this->lengthPassword);
         $password = '';
         for($i = 1; $i <= $this->lengthPassword; $i++) {
             $index = rand(0, count($this->symbols) - 1);
