@@ -17,4 +17,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/generate-password', [App\Http\Controllers\Site\GenerateControllerPassword::class, 'index'])->name('generate-password.index');
+Route::post('/generate-password', [App\Http\Controllers\Site\GenerateControllerPassword::class, 'generate'])->name('generate-password.store');
 require __DIR__.'/auth.php';
