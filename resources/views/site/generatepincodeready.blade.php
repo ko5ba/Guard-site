@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генерация пароля - Guard</title>
+    <title>Генерация пин-кода - Guard</title>
 </head>
 <body>
     <section>
         <header>
             <div>
-                <h1>Ваш пароль готов!</h1>
+                <h1>Ваш пин-код готов!</h1>
             </div>
         </header>
     </section>
     <section>
         <article>
             <div>
-                <p>{{ $password }}</p>
+                <p>{{ $pinCode }}</p>
             </div>
         </article>
     </section>
     <section>
         <footer>
             <div>
-                <a href="{{ route('generate-password.index') }}">Назад</a>
+                <a href="{{ route('generate-pin-code.index') }}">Назад</a>
             </div>
         </footer>
     </section>

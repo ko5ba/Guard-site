@@ -19,4 +19,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/generate-password', [App\Http\Controllers\Site\GenerateControllerPassword::class, 'index'])->name('generate-password.index');
 Route::post('/generate-password', [App\Http\Controllers\Site\GenerateControllerPassword::class, 'generate'])->name('generate-password.store');
+
+Route::get('/generate-pin-code', [App\Http\Controllers\Site\GeneratePinCodeController::class, 'index'])->name('generate-pin-code.index');
+Route::post('/generate-pin-code', [App\Http\Controllers\Site\GeneratePinCodeController::class, 'generate'])->name('generate-pin-code.store');
 require __DIR__.'/auth.php';

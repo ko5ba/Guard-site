@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генерация пароля - Guard</title>
+    <title>Генерация пин-кода - Guard</title>
 </head>
 <body>
     <section>
         <header>
             <div>
-                <h1>Страница генерации пароля</h1>
+                <h1>Генерация пин-кода</h1>
             </div>
         </header>
     </section>
     <section>
         <article>
             <div>
-                <form action="{{ route('generate-password.store') }}" method="POST">
+                <form action="" method="POST">
                     @csrf
                     <div>
-                        <label for="password">Введите длину пароля: </label>
-                        <input id="password" type="number" name="lengthPassword">
+                        <label for="pin-code">Введите длину пин-кода: </label>
+                        <input id="pin-code" type="number" name="lengthPinCode">
                     </div>
                     <div>
                         <button type="submit">Создать</button>

@@ -27,6 +27,7 @@ class GenerateControllerPassword extends Controller
         $this->lengthPassword = $request->input('lengthPassword');
         $storeRequest = $storeRequest->validated($this->lengthPassword);
         $password = '';
+
         for($i = 1; $i <= $this->lengthPassword; $i++) {
             $index = rand(0, count($this->symbols) - 1);
             $password .= $this->symbols[$index];
